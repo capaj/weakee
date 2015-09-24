@@ -1,0 +1,30 @@
+{
+  "name": "weakee",
+  "version": "0.9.0",
+  "description": "weakmap powered event emitter",
+  "main": "weakee.js",
+  "scripts": {
+    "test": "node run-tests.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/capaj/weakee.git"
+  },
+  "keywords": [
+    "event",
+    "emitter",
+    "weakmap",
+    "event-emitter"
+  ],
+  "author": "capajj@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/capaj/weakee/issues"
+  },
+  "homepage": "https://github.com/capaj/weakee#readme",
+  "devDependencies": {
+    "babel": "^5.8.23",
+    "chai": "^3.3.0",
+    "mocha": "^2.3.3"
+  }
+}
