@@ -1,8 +1,9 @@
+"format es6";
 'use strict'
 
 var objectToEvents = new WeakMap()
 
-class Emitter {
+export default class Emitter {
   constructor() {
     objectToEvents.set(this, {})
   }
@@ -53,5 +54,3 @@ class Emitter {
     return this
   }
 }
-
-export default Emitter
