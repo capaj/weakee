@@ -12,6 +12,7 @@ jspm i npm:weakee
 
 ### Usage
 ```javascript
+import Emitter from '../weakee'
 class UserClass extends Emitter {
   constructor() {
 	super()
