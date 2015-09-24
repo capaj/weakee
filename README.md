@@ -4,13 +4,13 @@ Written in ES6.
 Tests have a babel hook, but in order to use this in your node.js app, you will have to use babel register hook.
 On the frontend, JSPM handles it for you.
 ## Install
-```
+```shell
 npm i weakee -S
 #or on the frontend
 jspm i npm:weakee
 ```
 
-###Usage
+### Usage
 ```javascript
 class UserClass extends Emitter {
   constructor() {
