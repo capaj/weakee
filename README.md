@@ -22,7 +22,11 @@ class UserClass extends Emitter {
 var inst = new UserClass()
 
 inst.emit('myEvent', whatever, params)
-inst.on('myEvent', (whatever, params)=>{})
-inst.once('myEvent', (whatever, params)=>{})
-inst.off('myEvent', handlerFunction)
+inst.on('myEvent', (whatever, params)=>{
+  //runs until you call .off()
+})
+inst.once('myEvent', (whatever, params)=>{
+  //runs once
+})
+inst.off('myEvent', handlerFunction)	//removes the even handler
 ```
