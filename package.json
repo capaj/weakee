@@ -1,10 +1,14 @@
 {
   "name": "weakee",
-  "version": "0.9.1",
+  "version": "1.0.0",
   "description": "weakmap powered event emitter",
   "main": "weakee.js",
   "scripts": {
+    "precommit": "npm test",
     "test": "node run-tests.js"
+  },
+  "jspm": {
+    "format": "esm"
   },
   "repository": {
     "type": "git",
@@ -25,6 +29,7 @@
   "devDependencies": {
     "babel": "^5.8.23",
     "chai": "^3.3.0",
+    "husky": "^0.10.2",
     "mocha": "^2.3.3"
   }
 }

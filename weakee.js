@@ -1,13 +1,13 @@
-"format es6";
+'format es6'
 'use strict'
 
 var objectToEvents = new WeakMap()
 
 export default class Emitter {
-  constructor() {
+  constructor () {
     objectToEvents.set(this, {})
   }
-  on(type, handler) {
+  on (type, handler) {
     var events = objectToEvents.get(this)
 
     if (!events[type]) {
@@ -16,14 +16,14 @@ export default class Emitter {
     events[type].push(handler)
     return this
   }
-  once(type, handler) {
-    this.on(type, function tempHandler() {
+  once (type, handler) {
+    this.on(type, function tempHandler () {
       handler.apply(this, arguments)
       this.off(type, tempHandler)
     })
     return this
   }
-  off(type, handler) {
+  off (type, handler) {
     var events = objectToEvents.get(this)[type]
 
     if (events) {
@@ -35,15 +35,15 @@ export default class Emitter {
     }
     return this
   }
-  emit(type) {
+  emit (type) {
     var event, events
 
     events = (objectToEvents.get(this)[type] || []).slice()
 
-    var args = new Array(arguments.length-1);
-    var iterateTo = args.length + 1;
-    for(var i = 1; i < iterateTo; ++i) {
-      args[i-1] = arguments[i];
+    var args = new Array(arguments.length - 1)
+    var iterateTo = args.length + 1
+    for (var i = 1; i < iterateTo; ++i) {
+      args[i - 1] = arguments[i]
     }
 
     if (events.length) {
